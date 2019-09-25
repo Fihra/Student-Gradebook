@@ -10,13 +10,13 @@ namespace StudentDirectory.Models.Repository
 {
     public class MongoDBRepo
     {
-        public MongoClient Client { get; set; }
-        public IMongoDatabase Db { get; set; }
+        public MongoClient client;
+        public IMongoDatabase db;
 
         public MongoDBRepo(string url, string database)
         {
-            Client = new MongoClient(url);
-            Db = Client.GetDatabase(database);
+            client = new MongoClient(url);
+            db = client.GetDatabase(database);
 
         }
     }
