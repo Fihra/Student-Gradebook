@@ -1,7 +1,24 @@
-﻿
+﻿@model IEnumerable<StudentDirectory.Models.Student>
+
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Students</h2>
 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+    </tr>
+</table>
