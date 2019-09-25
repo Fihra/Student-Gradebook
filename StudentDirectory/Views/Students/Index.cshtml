@@ -21,4 +21,24 @@
             @Html.DisplayNameFor(model => model.Age)
         </th>
     </tr>
+
+    @foreach(var student in Model){
+        <tr>
+            <td>
+                @Html.DisplayFor(studentItem => student.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(studentItem => student.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(studentItem => student.Grade)
+            </td>
+            <td>
+                @Html.DisplayFor(studentItem => student.Age)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /*id=student.Id*/})
+            </td>
+        </tr>
+    }
 </table>

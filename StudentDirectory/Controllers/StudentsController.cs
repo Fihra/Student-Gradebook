@@ -44,7 +44,7 @@ namespace StudentDirectory.Controllers
         // GET: Students
         public ActionResult Index()
         {
-            return View();
+            return View(_students.SelectAll());
         }
     }
 }
