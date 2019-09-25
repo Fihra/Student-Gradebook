@@ -5,16 +5,19 @@ using System.Web;
 using MongoDB.Driver;
 using MongoDB.Bson;
 
+
 namespace StudentDirectory.Models.Repository
 {
     public class MongoDBRepo
     {
-        public IMongoDatabase db;
+        public MongoClient Client { get; set; }
+        public IMongoDatabase Db { get; set; }
 
         public MongoDBRepo(string url, string database)
         {
-            var client = new MongoClient(url);
-            db = client.GetDatabase(database);
+            Client = new MongoClient(url);
+            Db = Client.GetDatabase(database);
+
         }
     }
 

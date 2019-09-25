@@ -23,11 +23,6 @@ namespace StudentDirectory.Controllers
             return RedirectToAction("List", _students.SelectAll());
         }
 
-        public ActionResult List()
-        {
-            return View(_students.SelectAll());
-        }
-
         public ActionResult Edit(string studentId)
         {
             return View(_students.Get(studentId));

@@ -16,7 +16,7 @@ namespace StudentDirectory.Models.Repository
 
         public StudentCollection()
         {
-            Collection = _repo.db.GetCollection<Student>(_collection);
+            Collection = _repo.Db.GetCollection<Student>(_collection);
         }
 
         public void InsertStudent(Student student)

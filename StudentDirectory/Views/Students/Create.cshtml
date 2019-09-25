@@ -1,1 +1,25 @@
-﻿
+﻿@model IEnumerable<StudentDirectory.Models.Student>
+
+@{ 
+    ViewBag.Title = "Create";
+}
+
+<h2>New Student Form</h2>
+
+<form class="form">
+    <label>@Html.DisplayNameFor(model => model.FirstName)</label>
+    <input type="text" placeholder="John" />
+
+    <label>@Html.DisplayNameFor(model => model.LastName)</label>
+    <input type="text" placeholder="Smith" />
+
+    <label>@Html.DisplayNameFor(model => model.Age)</label>
+    <input type="text" placeholder="18" />
+
+    <label>@Html.DisplayNameFor(model => model.Grade)</label>
+    <input type="text" placeholder="Senior" />
+
+    <input class="btn-sm" type="submit" value="Create"/>
+
+
+</form>
