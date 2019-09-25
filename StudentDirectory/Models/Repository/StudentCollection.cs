@@ -14,10 +14,6 @@ namespace StudentDirectory.Models.Repository
         //private const string _collection = "StudentCollection";
         public IMongoCollection<Student> Collection;
 
-        //var client = new MongoClient("mongodb://localhost:27017");
-        //IMongoDatabase db = client.GetDatabase("FirstDatabase");
-        //this.collection = db.GetCollection<Employee>("Employees");
-
         public StudentCollection()
         {
             var client = new MongoClient("mongodb://localhost:27017");

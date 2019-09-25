@@ -1,25 +1,25 @@
 ﻿@model IEnumerable<StudentDirectory.Models.Student>
 
-@{ 
+@{
     ViewBag.Title = "Create";
 }
 
 <h2>New Student Form</h2>
 
-<form class="form">
+
+@using (Html.BeginForm("Create", "Students", FormMethod.Post))
+{
     <label>@Html.DisplayNameFor(model => model.FirstName)</label>
-    <input type="text" placeholder="John" />
+    <input name="FirstName" type="text" placeholder="John" value="" />
 
     <label>@Html.DisplayNameFor(model => model.LastName)</label>
-    <input type="text" placeholder="Smith" />
+    <input name="LastName" type="text" placeholder="Smith" value="" />
 
     <label>@Html.DisplayNameFor(model => model.Age)</label>
-    <input type="text" placeholder="18" />
+    <input name="Age" type="text" placeholder="18" value="" />
 
     <label>@Html.DisplayNameFor(model => model.Grade)</label>
-    <input type="text" placeholder="Senior" />
+    <input name="Grade" type="text" placeholder="Senior" value="" />
 
-    <input class="btn-sm" type="submit" value="Create"/>
-
-
-</form>
+    <input class="btn-sm" type="submit" name="submit" value="Create" />
+}

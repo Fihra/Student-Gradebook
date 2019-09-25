@@ -20,7 +20,7 @@ namespace StudentDirectory.Controllers
         public ActionResult Create(Student student)
         {
             _students.InsertStudent(student);
-            return RedirectToAction("List", _students.SelectAll());
+            return RedirectToAction("Index", _students.SelectAll());
         }
 
         public ActionResult Edit(string studentId)
@@ -33,7 +33,7 @@ namespace StudentDirectory.Controllers
         {
             _students.UpdateStudent(Id, student);
 
-            return RedirectToAction("List", _students.SelectAll());
+            return RedirectToAction("Index", _students.SelectAll());
         }
 
         // GET: Students
