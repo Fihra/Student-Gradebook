@@ -43,5 +43,20 @@ namespace StudentDirectory.Models.Repository
             var filter = Builders<Student>.Filter.Eq(s => s.Id, student.Id);
             Collection.ReplaceOne(filter, student);
         }
+
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    Movie movie = db.Movies.Find(id);
+        //    db.Movies.Remove(movie);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
+
+        public void DeleteStudent(string id, Student student)
+        {
+            student.Id = new ObjectId(id);
+            
+            Collection.DeleteOne(s => s.Id == student.Id);
+        }
     }
 }

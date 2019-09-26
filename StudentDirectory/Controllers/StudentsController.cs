@@ -36,6 +36,14 @@ namespace StudentDirectory.Controllers
             return RedirectToAction("Index", _students.SelectAll());
         }
 
+        [HttpPost, ActionName("Delete")]
+        public ActionResult Delete(string Id, Student student)
+        {
+            _students.DeleteStudent(Id, student);
+            return RedirectToAction("Index", _students.SelectAll());
+        }
+
+
         // GET: Students
         public ActionResult Index()
         {
